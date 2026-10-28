@@ -3,375 +3,152 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Marcos Moraes · Senior Frontend Engineer</title>
-<meta name="description" content="Senior Frontend Engineer with 14+ years in React, React Native and TypeScript. Offline-first apps that took field inspections from 7 days on paper to 1.">
-<meta property="og:title" content="Marcos Moraes · Senior Frontend Engineer">
-<meta property="og:description" content="Field inspections took 7 days on paper. My offline-first React Native apps made it 1.">
-<meta property="og:type" content="profile">
-<meta name="theme-color" content="#E4E7E3">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' fill='%23FCFCFA' stroke='%233F6E5C' stroke-width='2'/%3E%3Cpath d='M8 17l5 5 11-12' fill='none' stroke='%231F3A93' stroke-width='3'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<title>Marcos Moraes</title>
+<meta name="description" content="Frontend engineer in Campo Grande, Brazil. React, React Native and TypeScript, mostly for apps that need to work offline.">
+<meta property="og:title" content="Marcos Moraes">
+<meta property="og:description" content="Frontend engineer in Campo Grande, Brazil. React, React Native and TypeScript.">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='4' y='24' font-family='system-ui' font-size='22' font-weight='600'%3Em%3C/text%3E%3C/svg%3E">
 <style>
 :root {
-  --desk: #E4E7E3;
-  --sheet: #FCFCFA;
-  --form: #3F6E5C;
-  --rule: #BCCBC3;
-  --ink: #1B1F1D;
-  --muted: #56615C;
-  --pen: #1F3A93;
-  --red: #C8372D;
-  --focus: #1F3A93;
-  --label: "Archivo", "Arial Narrow", sans-serif;
-  --body: "IBM Plex Sans", system-ui, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --faint: #e6e6e6;
+  --link: #1a1a1a;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --desk: #0E1311;
-    --sheet: #161C19;
-    --form: #8FB8A6;
-    --rule: #2E3D36;
-    --ink: #E6EBE8;
-    --muted: #A2B0A9;
-    --pen: #A9BDFF;
-    --red: #FF7F73;
-    --focus: #A9BDFF;
+    --bg: #111111;
+    --text: #ededed;
+    --muted: #9a9a9a;
+    --faint: #2a2a2a;
+    --link: #ededed;
   }
 }
 :root[data-theme="dark"] {
-  --desk: #0E1311;
-  --sheet: #161C19;
-  --form: #8FB8A6;
-  --rule: #2E3D36;
-  --ink: #E6EBE8;
-  --muted: #A2B0A9;
-  --pen: #A9BDFF;
-  --red: #FF7F73;
-  --focus: #A9BDFF;
+  --bg: #111111;
+  --text: #ededed;
+  --muted: #9a9a9a;
+  --faint: #2a2a2a;
+  --link: #ededed;
 }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
-  background: var(--desk);
-  color: var(--ink);
-  font: 400 1rem/1.6 var(--body);
+  background: var(--bg);
+  color: var(--text);
+  font: 400 15px/1.7 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-a { color: var(--pen); text-underline-offset: 3px; }
-:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+main { max-width: 600px; margin: 0 auto; padding: 96px 20px 80px; }
 
-.sheet {
-  max-width: 920px;
-  margin: 40px auto 64px;
-  background: var(--sheet);
-  border: 1px solid var(--rule);
-  box-shadow: 0 1px 0 var(--rule), 0 18px 40px -24px rgb(0 0 0 / 0.25);
-  padding: 32px 40px 40px;
-}
+a { color: var(--link); text-decoration: underline; text-decoration-color: var(--faint); text-decoration-thickness: 1px; text-underline-offset: 3px; transition: text-decoration-color .15s; }
+a:hover { text-decoration-color: currentColor; }
+:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; border-radius: 2px; }
 
-.lbl {
-  display: block;
-  font: 650 0.6875rem/1.2 var(--label);
-  font-stretch: 78%;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--form);
-}
-.pen { font-family: var(--mono); color: var(--pen); }
+header h1 { font-size: 15px; font-weight: 600; margin: 0; }
+header p { margin: 0; color: var(--muted); }
 
-.masthead {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
-  padding-bottom: 14px;
-  border-bottom: 3px double var(--form);
-}
-.masthead .title {
-  font: 800 1.05rem/1 var(--label);
-  font-stretch: 112%;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--form);
-}
-.masthead .pen { font-size: 0.875rem; }
+section { margin-top: 56px; }
+h2 { font-size: 15px; font-weight: 400; color: var(--muted); margin: 0 0 16px; }
+p { margin: 0 0 16px; }
+p:last-child { margin-bottom: 0; }
 
-.fields {
-  display: grid;
-  grid-template-columns: 2.2fr 1.4fr 1fr;
-  border-left: 1px solid var(--rule);
-  margin-top: 20px;
-}
-.field {
-  border: 1px solid var(--rule);
-  border-left: 0;
-  padding: 8px 12px 10px;
-  min-width: 0;
-}
-.field .v { display: block; margin-top: 4px; font: 500 1rem/1.35 var(--mono); color: var(--pen); }
+.list { list-style: none; margin: 0; padding: 0; }
+.list li { margin: 0 0 20px; }
+.list li:last-child { margin-bottom: 0; }
+.list .meta { color: var(--muted); }
 
-.result {
-  border: 1px solid var(--rule);
-  border-top: 0;
-  padding: 28px 24px 28px;
-}
-.claim {
-  font: 800 clamp(2.1rem, 5.6vw, 3.9rem)/1.04 var(--label);
-  font-stretch: 92%;
-  letter-spacing: -0.015em;
-  margin: 10px 0 0;
-  text-wrap: balance;
-}
-.was { position: relative; white-space: nowrap; text-decoration: none; }
-.was::after {
-  content: "";
-  position: absolute;
-  left: -4%;
-  right: -4%;
-  top: 54%;
-  height: 0.09em;
-  background: var(--red);
-  border-radius: 2px;
-  transform: rotate(-3deg) scaleX(1);
-  transform-origin: left center;
-}
-.now {
-  font-family: var(--mono);
-  font-weight: 500;
-  font-size: 0.82em;
-  color: var(--pen);
-  letter-spacing: -0.06em;
-  white-space: nowrap;
-  text-decoration: none;
-  margin-left: 0.18em;
-}
-.js .was::after { transform: rotate(-3deg) scaleX(0); }
-.js .now { opacity: 0; }
-.js.go .was::after { transform: rotate(-3deg) scaleX(1); transition: transform .45s cubic-bezier(.6,.05,.3,1) .5s; }
-.js.go .now { opacity: 1; transition: opacity .35s ease 1s; }
+.jobs li { display: grid; grid-template-columns: 120px 1fr; gap: 0 20px; }
+.jobs .when { color: var(--muted); font-variant-numeric: tabular-nums; }
+.jobs p { margin: 2px 0 0; color: var(--muted); }
 
-.claim-note { max-width: 62ch; margin: 18px 0 0; color: var(--muted); font-size: 1.0625rem; }
-.claim-note strong { color: var(--ink); font-weight: 600; }
+.links { display: flex; flex-wrap: wrap; gap: 6px 20px; list-style: none; margin: 0; padding: 0; }
 
-.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-.btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 11px 16px;
-  border: 1px solid var(--form);
-  font: 600 0.8125rem/1 var(--label);
-  font-stretch: 90%;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--form);
-  text-decoration: none;
-  background: transparent;
-}
-.btn:hover { background: color-mix(in srgb, var(--form) 10%, transparent); }
-.btn.primary { background: var(--pen); border-color: var(--pen); color: var(--sheet); }
-.btn.primary:hover { background: color-mix(in srgb, var(--pen) 85%, var(--ink)); }
-.btn svg { width: 14px; height: 14px; }
+footer { margin-top: 72px; color: var(--muted); font-size: 13px; }
 
-.block { margin-top: 36px; }
-.block-head {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--form);
-}
-.block-head h2 {
-  margin: 0;
-  font: 750 1.25rem/1.1 var(--label);
-  font-stretch: 100%;
-}
-.block-head .lbl { margin-left: auto; color: var(--muted); }
-
-.rows { margin: 0; padding: 0; list-style: none; }
-.row {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 4px 28px;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--rule);
-}
-.row:last-child { border-bottom: 0; }
-.row .when { font: 400 0.8125rem/1.6 var(--mono); color: var(--pen); padding-top: 3px; }
-.row h3 { margin: 0; font: 700 1.125rem/1.3 var(--label); font-stretch: 100%; }
-.row .org { margin: 2px 0 10px; color: var(--muted); font-size: 0.9375rem; }
-.row ul { margin: 0; padding-left: 1.05em; }
-.row li { margin: 0 0 6px; }
-.row li::marker { color: var(--form); }
-.row p { margin: 0; }
-.row .stack { font: 400 0.8125rem/1.5 var(--mono); color: var(--pen); margin-top: 4px; }
-
-.grid2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-left: 1px solid var(--rule);
-  border-top: 1px solid var(--rule);
-  margin-top: 14px;
-}
-.grid2 .field { border-top: 0; padding: 10px 14px 12px; }
-.grid2 .field p { margin: 6px 0 0; }
-
-.signoff {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: end;
-  gap: 16px;
-  margin-top: 40px;
-  padding-top: 16px;
-  border-top: 3px double var(--form);
-}
-.signoff .line { min-width: 240px; border-top: 1px solid var(--ink); padding-top: 6px; }
-.signoff .pen { font-size: 0.875rem; }
-
-@media (max-width: 720px) {
-  .sheet { margin: 0; border: 0; box-shadow: none; padding: 20px 16px 32px; }
-  .masthead { flex-direction: column; gap: 6px; }
-  .fields { grid-template-columns: 1fr 1fr; }
-  .fields .field:first-child { grid-column: 1 / -1; }
-  .result { padding: 22px 14px; }
-  .row { grid-template-columns: 1fr; padding: 16px 0; }
-  .grid2 { grid-template-columns: 1fr; }
-  .signoff .line { min-width: 0; width: 100%; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .js .was::after { transform: rotate(-3deg) scaleX(1); transition: none; }
-  .js .now { opacity: 1; transition: none; }
+@media (max-width: 520px) {
+  main { padding: 56px 20px 64px; }
+  .jobs li { grid-template-columns: 1fr; }
 }
 @media print {
-  body { background: #fff; }
-  .sheet { margin: 0; border: 0; box-shadow: none; padding: 0; max-width: none; }
-  .actions { display: none; }
-  .js .was::after { transform: rotate(-3deg) scaleX(1); }
-  .js .now { opacity: 1; }
-  .row { break-inside: avoid; }
+  main { padding: 0; max-width: none; }
+  a { text-decoration: none; }
 }
 </style>
-<script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<main class="sheet">
+<main>
   <header>
-    <div class="masthead">
-      <span class="title">Candidate record</span>
-      <span class="pen">Senior Frontend Engineer · open to remote</span>
-    </div>
-
-    <div class="fields">
-      <div class="field"><span class="lbl">Full name</span><span class="v">Marcos Vinicius Ferreira Moraes</span></div>
-      <div class="field"><span class="lbl">Based in</span><span class="v">Campo Grande, Brazil</span></div>
-      <div class="field"><span class="lbl">Experience</span><span class="v">14+ years</span></div>
-    </div>
-
-    <div class="result">
-      <span class="lbl">Result on file</span>
-      <h1 class="claim">Field inspections took <del class="was">7&nbsp;days</del> <ins class="now">1&#8239;day</ins> after my apps replaced the paper form.</h1>
-      <p class="claim-note">Two offline-first <strong>React Native</strong> apps for inspectors working without signal in rural Mato Grosso do Sul, part of a government platform with <strong>90,000+ users</strong>. I build with React, React Native and TypeScript, and I'm comfortable down to the API and the database.</p>
-      <div class="actions">
-        <a class="btn primary" href="/Marcos-Moraes-CV.pdf" download>
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10"/></svg>
-          Download CV (PDF)
-        </a>
-        <a class="btn" href="mailto:mvfmoraes@gmail.com">Email</a>
-        <a class="btn" href="https://linkedin.com/in/mvfmoraes" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://github.com/mvfmoraes" rel="noopener">GitHub</a>
-      </div>
-    </div>
+    <h1>Marcos Moraes</h1>
+    <p>Senior Frontend Engineer</p>
   </header>
 
-  <section class="block" aria-labelledby="exp">
-    <div class="block-head"><h2 id="exp">Experience</h2><span class="lbl">2012 – present</span></div>
-    <ol class="rows" reversed>
-      <li class="row">
-        <span class="when">Mar 2019 – now</span>
-        <div>
-          <h3>Senior Software Engineer</h3>
-          <p class="org">Mil Tec Tecnologia da Informação, allocated to the Government of Mato Grosso do Sul (agricultural defense)</p>
-          <ul>
-            <li>Build web and mobile applications for eSaniagro, the state animal and plant health platform with 90,000+ users.</li>
-            <li>Shipped eVIGI@GRO and Transportador, two offline-first React Native apps: Realm as the local source of truth, initial data load, and sync of pending records when the signal returns. Transport efficiency up by as much as 20%.</li>
-            <li>Hardened the offline layer: fixed Realm transactions left open, concurrent writes and a startup race condition; moved image uploads to multipart FormData for weak rural connections.</li>
-            <li>Upgraded the public services portal from Angular 15 to 22, version by version, without pausing delivery.</li>
-            <li>Cut load times by up to 40% and built monitoring with proactive alerts that also caught bot-driven traffic early.</li>
-            <li>Work across the stack: .NET 8 APIs behind the apps (JWT, Kafka events, 259 unit tests) and a fix for production SQL Server deadlocks on payment tables.</li>
-          </ul>
-        </div>
-      </li>
-      <li class="row">
-        <span class="when">May 2013 – Mar 2019</span>
-        <div>
-          <h3>Software Engineer</h3>
-          <p class="org">Mil Tec Tecnologia da Informação, Campo Grande</p>
-          <ul>
-            <li>Led the visual redesign of eSaniagro into a responsive interface for desktop, tablet and phone.</li>
-            <li>Built interfaces with React, Angular and KnockoutJS on top of REST APIs; helped the team adopt Scrum and continuous delivery.</li>
-          </ul>
-        </div>
-      </li>
-      <li class="row">
-        <span class="when">Feb 2012 – May 2013</span>
-        <div>
-          <h3>Software Support Analyst</h3>
-          <p class="org">ITEL Informática, Campo Grande</p>
-          <ul><li>Developed and maintained web applications with C#, JavaScript and ASP.NET MVC 3.</li></ul>
-        </div>
-      </li>
-    </ol>
+  <section aria-label="About">
+    <p>I'm a frontend engineer in Campo Grande, Brazil. For the past ten years I've worked on eSaniagro, the system Mato Grosso do Sul uses to manage animal and plant health, with more than 90,000 users.</p>
+    <p>Most of my work is in React, React Native and TypeScript. The apps I'm proudest of are used by inspectors in rural areas where there's usually no signal, so they keep everything on the device and sync when they're back in range. They took inspection processing from up to seven days down to one.</p>
+    <p>I also work on the backend, in .NET and SQL. It helps a lot when the bug isn't in the UI.</p>
   </section>
 
-  <section class="block" aria-labelledby="skills">
-    <div class="block-head"><h2 id="skills">Skills</h2></div>
-    <div class="grid2">
-      <div class="field"><span class="lbl">Frontend &amp; mobile</span><p>React, React Native, TypeScript, Next.js, Angular, HTML, CSS, responsive design, accessibility</p></div>
-      <div class="field"><span class="lbl">State &amp; data</span><p>Zustand, use-context-selector, Realm (offline-first), AsyncStorage, sync on reconnect, RxJS, REST, Zod</p></div>
-      <div class="field"><span class="lbl">Quality &amp; delivery</span><p>Jest, Vitest, ESLint, Prettier, code review, GitHub Actions, Azure Pipelines, Docker</p></div>
-      <div class="field"><span class="lbl">Backend</span><p>.NET 8 / C#, ASP.NET Core, SQL Server, PostgreSQL / Supabase, Prisma, JWT, OAuth</p></div>
-    </div>
-  </section>
-
-  <section class="block" aria-labelledby="clients">
-    <div class="block-head"><h2 id="clients">Independent client work</h2><span class="lbl">Sole developer</span></div>
-    <ul class="rows">
-      <li class="row">
-        <span class="when">Dr. André</span>
-        <div><p>Medical practice site and admin area with Google sign-in and a booking slot engine covered by Vitest tests.</p><p class="stack">Next.js 16 · Prisma · NextAuth · Zod</p></div>
+  <section aria-labelledby="work">
+    <h2 id="work">Work</h2>
+    <ul class="list jobs">
+      <li>
+        <span class="when">2019 — now</span>
+        <div>
+          Mil Tec, Senior Software Engineer
+          <p>Web and mobile for the state government's agricultural defense platforms. Offline-first React Native apps, an Angular 15 to 22 upgrade, monitoring, and the .NET APIs behind it all.</p>
+        </div>
       </li>
-      <li class="row">
-        <span class="when">ForYouClinic</span>
-        <div><p>Clinic management where double booking is blocked by the database itself, plus a financial module and row-level security.</p><p class="stack">Next.js 16 · Supabase · PostgreSQL</p></div>
+      <li>
+        <span class="when">2013 — 2019</span>
+        <div>
+          Mil Tec, Software Engineer
+          <p>Led the redesign of eSaniagro and built its interfaces with React, Angular and KnockoutJS.</p>
+        </div>
       </li>
-      <li class="row">
-        <span class="when">Novilho Precoce</span>
-        <div><p>Producers' association system: React frontend and its API, with access by profile and status-driven workflows.</p><p class="stack">React · Vite · .NET 8</p></div>
+      <li>
+        <span class="when">2012 — 2013</span>
+        <div>
+          ITEL Informática, Software Support Analyst
+          <p>C#, JavaScript and ASP.NET MVC applications.</p>
+        </div>
       </li>
     </ul>
   </section>
 
-  <section class="block" aria-labelledby="more">
-    <div class="block-head"><h2 id="more">Education &amp; languages</h2></div>
-    <div class="grid2">
-      <div class="field"><span class="lbl">Education</span><p>B.Sc. in Computer Science, Centro Universitário Anhanguera (UNAES), 2008 – 2011</p></div>
-      <div class="field"><span class="lbl">Languages</span><p>Portuguese, native · English, B2 (CEFR), improving toward professional fluency</p></div>
-      <div class="field"><span class="lbl">Recognition</span><p>Products shortlisted at Brazil's national Public Sector Innovation Contest (ENAP), 2019 and 2020</p></div>
-      <div class="field"><span class="lbl">Contact</span><p><a href="mailto:mvfmoraes@gmail.com">mvfmoraes@gmail.com</a></p></div>
-    </div>
+  <section aria-labelledby="projects">
+    <h2 id="projects">Projects</h2>
+    <ul class="list">
+      <li>eVIGI@GRO <span class="meta">— React Native app for field inspections, works fully offline with Realm</span></li>
+      <li>Transportador <span class="meta">— app for animal transport, built on the same offline sync</span></li>
+      <li>Public services portal <span class="meta">— upgraded from Angular 15 to 22 one version at a time, without pausing releases</span></li>
+      <li>Dr. André <span class="meta">— site and admin for a medical practice, with online booking (Next.js)</span></li>
+      <li>ForYouClinic <span class="meta">— clinic management where the database itself prevents double bookings (Next.js, Supabase)</span></li>
+      <li>Novilho Precoce <span class="meta">— system for a cattle producers' association (React, .NET)</span></li>
+    </ul>
   </section>
 
-  <footer class="signoff">
-    <div class="line"><span class="lbl">Signed</span><span class="pen">Marcos Moraes</span></div>
-    <span class="lbl">Campo Grande, MS · Brazil</span>
-  </footer>
+  <section aria-labelledby="now">
+    <h2 id="now">Now</h2>
+    <p>Looking for a remote frontend role on a product people rely on every day. Also working on my English, which is at a B2 level and getting better.</p>
+  </section>
+
+  <section aria-labelledby="contact">
+    <h2 id="contact">Contact</h2>
+    <ul class="links">
+      <li><a href="mailto:mvfmoraes@gmail.com">Email</a></li>
+      <li><a href="https://linkedin.com/in/mvfmoraes" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/mvfmoraes" rel="noopener">GitHub</a></li>
+      <li><a href="/Marcos-Moraes-CV.pdf">Résumé (PDF)</a></li>
+    </ul>
+  </section>
+
+  <footer>Campo Grande, MS</footer>
 </main>
-<script>
-requestAnimationFrame(() => requestAnimationFrame(() => document.documentElement.classList.add("go")));
-</script>
 </body>
 </html>
