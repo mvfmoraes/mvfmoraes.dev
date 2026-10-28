@@ -4,347 +4,374 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Marcos Moraes · Senior Frontend Engineer</title>
-<meta name="description" content="Senior Frontend Engineer with 14+ years in React, React Native and TypeScript. Offline-first mobile apps for field inspectors serving a 90,000+ user government platform.">
+<meta name="description" content="Senior Frontend Engineer with 14+ years in React, React Native and TypeScript. Offline-first apps that took field inspections from 7 days on paper to 1.">
 <meta property="og:title" content="Marcos Moraes · Senior Frontend Engineer">
-<meta property="og:description" content="React, React Native and TypeScript. Offline-first apps that keep working when the signal doesn't.">
+<meta property="og:description" content="Field inspections took 7 days on paper. My offline-first React Native apps made it 1.">
 <meta property="og:type" content="profile">
-<meta name="theme-color" content="#EDF1EE">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316302A'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%235FBF84'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#E4E7E3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' fill='%23FCFCFA' stroke='%233F6E5C' stroke-width='2'/%3E%3Cpath d='M8 17l5 5 11-12' fill='none' stroke='%231F3A93' stroke-width='3'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
-  --paper: #EDF1EE;
-  --card: #F8FAF8;
-  --ink: #16302A;
-  --muted: #4E625B;
-  --rule: #C9D3CE;
-  --field: #2E7D52;
-  --queued: #B87503;
-  --focus: #1C6FD1;
-  --display: "Bricolage Grotesque", system-ui, sans-serif;
-  --body: "Instrument Sans", system-ui, sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, monospace;
+  --desk: #E4E7E3;
+  --sheet: #FCFCFA;
+  --form: #3F6E5C;
+  --rule: #BCCBC3;
+  --ink: #1B1F1D;
+  --muted: #56615C;
+  --pen: #1F3A93;
+  --red: #C8372D;
+  --focus: #1F3A93;
+  --label: "Archivo", "Arial Narrow", sans-serif;
+  --body: "IBM Plex Sans", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #0F1916;
-    --card: #15221E;
-    --ink: #E2EAE5;
-    --muted: #9AACA4;
-    --rule: #2A3B35;
-    --field: #5FBF84;
-    --queued: #F0B23A;
-    --focus: #7FB4F5;
+    --desk: #0E1311;
+    --sheet: #161C19;
+    --form: #8FB8A6;
+    --rule: #2E3D36;
+    --ink: #E6EBE8;
+    --muted: #A2B0A9;
+    --pen: #A9BDFF;
+    --red: #FF7F73;
+    --focus: #A9BDFF;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #0F1916;
-  --card: #15221E;
-  --ink: #E2EAE5;
-  --muted: #9AACA4;
-  --rule: #2A3B35;
-  --field: #5FBF84;
-  --queued: #F0B23A;
-  --focus: #7FB4F5;
+  --desk: #0E1311;
+  --sheet: #161C19;
+  --form: #8FB8A6;
+  --rule: #2E3D36;
+  --ink: #E6EBE8;
+  --muted: #A2B0A9;
+  --pen: #A9BDFF;
+  --red: #FF7F73;
+  --focus: #A9BDFF;
 }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--desk);
   color: var(--ink);
-  font: 400 1.0625rem/1.6 var(--body);
+  font: 400 1rem/1.6 var(--body);
   -webkit-font-smoothing: antialiased;
 }
-a { color: inherit; text-decoration-color: var(--field); text-underline-offset: 3px; }
-a:hover { color: var(--field); }
-:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+a { color: var(--pen); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
 
-.wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
-
-.hero { padding: 72px 0 56px; border-bottom: 1px solid var(--rule); }
-.name {
-  font: 500 0.875rem/1 var(--mono);
-  letter-spacing: 0.02em;
-  color: var(--muted);
-  margin: 0 0 28px;
+.sheet {
+  max-width: 920px;
+  margin: 40px auto 64px;
+  background: var(--sheet);
+  border: 1px solid var(--rule);
+  box-shadow: 0 1px 0 var(--rule), 0 18px 40px -24px rgb(0 0 0 / 0.25);
+  padding: 32px 40px 40px;
 }
-.name strong { color: var(--ink); font-weight: 500; }
-h1 {
-  font: 700 clamp(2.4rem, 6.4vw, 4.4rem)/1.02 var(--display);
-  letter-spacing: -0.025em;
-  margin: 0;
-  max-width: 14ch;
+
+.lbl {
+  display: block;
+  font: 650 0.6875rem/1.2 var(--label);
+  font-stretch: 78%;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--form);
+}
+.pen { font-family: var(--mono); color: var(--pen); }
+
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 3px double var(--form);
+}
+.masthead .title {
+  font: 800 1.05rem/1 var(--label);
+  font-stretch: 112%;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--form);
+}
+.masthead .pen { font-size: 0.875rem; }
+
+.fields {
+  display: grid;
+  grid-template-columns: 2.2fr 1.4fr 1fr;
+  border-left: 1px solid var(--rule);
+  margin-top: 20px;
+}
+.field {
+  border: 1px solid var(--rule);
+  border-left: 0;
+  padding: 8px 12px 10px;
+  min-width: 0;
+}
+.field .v { display: block; margin-top: 4px; font: 500 1rem/1.35 var(--mono); color: var(--pen); }
+
+.result {
+  border: 1px solid var(--rule);
+  border-top: 0;
+  padding: 28px 24px 28px;
+}
+.claim {
+  font: 800 clamp(2.1rem, 5.6vw, 3.9rem)/1.04 var(--label);
+  font-stretch: 92%;
+  letter-spacing: -0.015em;
+  margin: 10px 0 0;
   text-wrap: balance;
 }
-h1 em { font-style: normal; color: var(--field); }
-.lede { max-width: 58ch; margin: 24px 0 0; color: var(--muted); font-size: 1.125rem; }
-.lede strong { color: var(--ink); font-weight: 600; }
+.was { position: relative; white-space: nowrap; text-decoration: none; }
+.was::after {
+  content: "";
+  position: absolute;
+  left: -4%;
+  right: -4%;
+  top: 54%;
+  height: 0.09em;
+  background: var(--red);
+  border-radius: 2px;
+  transform: rotate(-3deg) scaleX(1);
+  transform-origin: left center;
+}
+.now {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.82em;
+  color: var(--pen);
+  letter-spacing: -0.06em;
+  white-space: nowrap;
+  text-decoration: none;
+  margin-left: 0.18em;
+}
+.js .was::after { transform: rotate(-3deg) scaleX(0); }
+.js .now { opacity: 0; }
+.js.go .was::after { transform: rotate(-3deg) scaleX(1); transition: transform .45s cubic-bezier(.6,.05,.3,1) .5s; }
+.js.go .now { opacity: 1; transition: opacity .35s ease 1s; }
 
-.sync {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 32px;
-  padding: 10px 16px 10px 14px;
-  background: var(--card);
-  border: 1px solid var(--rule);
-  border-radius: 999px;
-  font: 400 0.8125rem/1.3 var(--mono);
-  color: var(--muted);
-}
-.sync .dot {
-  width: 10px; height: 10px; border-radius: 50%;
-  background: var(--field);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--field) 20%, transparent);
-  flex: none;
-}
-.sync[data-state="queued"] .dot {
-  background: var(--queued);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--queued) 22%, transparent);
-  animation: pulse 1.1s ease-in-out infinite;
-}
-.sync b { color: var(--ink); font-weight: 500; }
-@keyframes pulse { 50% { opacity: 0.35; } }
+.claim-note { max-width: 62ch; margin: 18px 0 0; color: var(--muted); font-size: 1.0625rem; }
+.claim-note strong { color: var(--ink); font-weight: 600; }
 
-.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 12px 20px;
-  border-radius: 10px;
-  border: 1px solid var(--rule);
-  font: 600 0.9375rem/1 var(--body);
-  text-decoration: none;
-  background: var(--card);
-  transition: border-color .15s, transform .15s;
-}
-.btn:hover { border-color: var(--field); color: var(--ink); transform: translateY(-1px); }
-.btn.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-.btn.primary:hover { color: var(--paper); background: var(--field); border-color: var(--field); }
-.btn svg { width: 16px; height: 16px; }
-
-section { padding: 56px 0; border-bottom: 1px solid var(--rule); }
-section:last-of-type { border-bottom: 0; }
-h2 {
-  font: 500 0.8125rem/1 var(--mono);
+  padding: 11px 16px;
+  border: 1px solid var(--form);
+  font: 600 0.8125rem/1 var(--label);
+  font-stretch: 90%;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--field);
-  margin: 0 0 28px;
+  letter-spacing: 0.06em;
+  color: var(--form);
+  text-decoration: none;
+  background: transparent;
 }
+.btn:hover { background: color-mix(in srgb, var(--form) 10%, transparent); }
+.btn.primary { background: var(--pen); border-color: var(--pen); color: var(--sheet); }
+.btn.primary:hover { background: color-mix(in srgb, var(--pen) 85%, var(--ink)); }
+.btn svg { width: 14px; height: 14px; }
 
-.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.stat { border-top: 2px solid var(--ink); padding-top: 14px; }
-.stat .v { font: 700 2.25rem/1 var(--display); letter-spacing: -0.02em; }
-.stat .l { display: block; margin-top: 8px; color: var(--muted); font-size: 0.9375rem; line-height: 1.45; }
+.block { margin-top: 36px; }
+.block-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--form);
+}
+.block-head h2 {
+  margin: 0;
+  font: 750 1.25rem/1.1 var(--label);
+  font-stretch: 100%;
+}
+.block-head .lbl { margin-left: auto; color: var(--muted); }
 
-.job { display: grid; grid-template-columns: 168px 1fr; gap: 8px 32px; padding: 0 0 36px; }
-.job:last-child { padding-bottom: 0; }
-.when { font: 400 0.8125rem/1.6 var(--mono); color: var(--muted); padding-top: 4px; }
-.job h3 { font: 700 1.3rem/1.25 var(--display); margin: 0; letter-spacing: -0.01em; }
-.org { margin: 4px 0 14px; color: var(--muted); font-size: 0.9375rem; }
-ul { margin: 0; padding-left: 1.1em; }
-li { margin: 0 0 8px; }
-li::marker { color: var(--field); }
+.rows { margin: 0; padding: 0; list-style: none; }
+.row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 4px 28px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.row:last-child { border-bottom: 0; }
+.row .when { font: 400 0.8125rem/1.6 var(--mono); color: var(--pen); padding-top: 3px; }
+.row h3 { margin: 0; font: 700 1.125rem/1.3 var(--label); font-stretch: 100%; }
+.row .org { margin: 2px 0 10px; color: var(--muted); font-size: 0.9375rem; }
+.row ul { margin: 0; padding-left: 1.05em; }
+.row li { margin: 0 0 6px; }
+.row li::marker { color: var(--form); }
+.row p { margin: 0; }
+.row .stack { font: 400 0.8125rem/1.5 var(--mono); color: var(--pen); margin-top: 4px; }
 
-.skills { display: grid; grid-template-columns: 168px 1fr; gap: 18px 32px; margin: 0; }
-.skills dt { font: 500 0.8125rem/1.7 var(--mono); color: var(--muted); }
-.skills dd { margin: 0; }
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-left: 1px solid var(--rule);
+  border-top: 1px solid var(--rule);
+  margin-top: 14px;
+}
+.grid2 .field { border-top: 0; padding: 10px 14px 12px; }
+.grid2 .field p { margin: 6px 0 0; }
 
-.projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.project { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 20px; }
-.project h3 { font: 700 1.05rem/1.3 var(--display); margin: 0 0 6px; }
-.project .stack { font: 400 0.75rem/1.5 var(--mono); color: var(--field); margin: 0 0 10px; }
-.project p { margin: 0; font-size: 0.9375rem; color: var(--muted); }
-
-.facts { display: grid; grid-template-columns: 168px 1fr; gap: 12px 32px; margin: 0; }
-.facts dt { font: 500 0.8125rem/1.7 var(--mono); color: var(--muted); }
-.facts dd { margin: 0; }
-
-footer { padding: 40px 0 64px; color: var(--muted); font: 400 0.8125rem/1.6 var(--mono); }
-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+.signoff {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px;
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 3px double var(--form);
+}
+.signoff .line { min-width: 240px; border-top: 1px solid var(--ink); padding-top: 6px; }
+.signoff .pen { font-size: 0.875rem; }
 
 @media (max-width: 720px) {
-  .hero { padding: 48px 0 40px; }
-  .stats, .projects { grid-template-columns: 1fr; }
-  .job, .skills, .facts { grid-template-columns: 1fr; gap: 4px; }
-  .skills dd, .facts dd { margin-bottom: 14px; }
-  .wrap { padding: 0 16px; }
-  .sync { border-radius: 14px; max-width: 100%; align-items: flex-start; }
-  .sync .dot { margin-top: 3px; }
+  .sheet { margin: 0; border: 0; box-shadow: none; padding: 20px 16px 32px; }
+  .masthead { flex-direction: column; gap: 6px; }
+  .fields { grid-template-columns: 1fr 1fr; }
+  .fields .field:first-child { grid-column: 1 / -1; }
+  .result { padding: 22px 14px; }
+  .row { grid-template-columns: 1fr; padding: 16px 0; }
+  .grid2 { grid-template-columns: 1fr; }
+  .signoff .line { min-width: 0; width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .was::after { transform: rotate(-3deg) scaleX(1); transition: none; }
+  .js .now { opacity: 1; transition: none; }
 }
 @media print {
-  .actions, .sync { display: none; }
-  body { background: #fff; color: #000; font-size: 11pt; }
-  section, .hero { padding: 18px 0; }
+  body { background: #fff; }
+  .sheet { margin: 0; border: 0; box-shadow: none; padding: 0; max-width: none; }
+  .actions { display: none; }
+  .js .was::after { transform: rotate(-3deg) scaleX(1); }
+  .js .now { opacity: 1; }
+  .row { break-inside: avoid; }
 }
 </style>
+<script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<main>
-  <header class="hero">
-    <div class="wrap">
-      <p class="name"><strong>Marcos Moraes</strong> · Senior Frontend Engineer · Campo Grande, Brazil</p>
-      <h1>I build apps that keep working when the <em>signal doesn't.</em></h1>
-      <p class="lede">14+ years with <strong>React, React Native and TypeScript</strong>. My apps are used by field inspectors in rural Brazil, where connectivity is the exception, on a government platform with <strong>90,000+ users</strong>.</p>
-      <p class="sync" id="sync" data-state="synced" role="status" aria-live="polite">
-        <span class="dot" aria-hidden="true"></span>
-        <span id="sync-text"><b>Synced</b> · 3 inspection records sent · 0 conflicts</span>
-      </p>
+<main class="sheet">
+  <header>
+    <div class="masthead">
+      <span class="title">Candidate record</span>
+      <span class="pen">Senior Frontend Engineer · open to remote</span>
+    </div>
+
+    <div class="fields">
+      <div class="field"><span class="lbl">Full name</span><span class="v">Marcos Vinicius Ferreira Moraes</span></div>
+      <div class="field"><span class="lbl">Based in</span><span class="v">Campo Grande, Brazil</span></div>
+      <div class="field"><span class="lbl">Experience</span><span class="v">14+ years</span></div>
+    </div>
+
+    <div class="result">
+      <span class="lbl">Result on file</span>
+      <h1 class="claim">Field inspections took <del class="was">7&nbsp;days</del> <ins class="now">1&#8239;day</ins> after my apps replaced the paper form.</h1>
+      <p class="claim-note">Two offline-first <strong>React Native</strong> apps for inspectors working without signal in rural Mato Grosso do Sul, part of a government platform with <strong>90,000+ users</strong>. I build with React, React Native and TypeScript, and I'm comfortable down to the API and the database.</p>
       <div class="actions">
         <a class="btn primary" href="/Marcos-Moraes-CV.pdf" download>
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10"/></svg>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10"/></svg>
           Download CV (PDF)
         </a>
-        <a class="btn" href="mailto:mvfmoraes@gmail.com">Email me</a>
+        <a class="btn" href="mailto:mvfmoraes@gmail.com">Email</a>
         <a class="btn" href="https://linkedin.com/in/mvfmoraes" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://github.com/mvfmoraes" rel="noopener">GitHub</a>
       </div>
     </div>
   </header>
 
-  <section aria-labelledby="impact">
-    <div class="wrap">
-      <h2 id="impact">Impact</h2>
-      <div class="stats">
-        <p class="stat"><span class="v">−85%</span><span class="l">inspection processing time, from up to 7 days to 1, with two offline-first React Native apps</span></p>
-        <p class="stat"><span class="v">−40%</span><span class="l">application load time through performance, state management and API work</span></p>
-        <p class="stat"><span class="v">2019, 2020</span><span class="l">products shortlisted at Brazil's national Public Sector Innovation Contest (ENAP)</span></p>
-      </div>
-    </div>
-  </section>
-
-  <section aria-labelledby="experience">
-    <div class="wrap">
-      <h2 id="experience">Experience</h2>
-
-      <article class="job">
-        <p class="when">Mar 2019 – Present</p>
+  <section class="block" aria-labelledby="exp">
+    <div class="block-head"><h2 id="exp">Experience</h2><span class="lbl">2012 – present</span></div>
+    <ol class="rows" reversed>
+      <li class="row">
+        <span class="when">Mar 2019 – now</span>
         <div>
           <h3>Senior Software Engineer</h3>
-          <p class="org">Mil Tec Tecnologia da Informação · allocated to the Government of Mato Grosso do Sul, agricultural defense platforms</p>
+          <p class="org">Mil Tec Tecnologia da Informação, allocated to the Government of Mato Grosso do Sul (agricultural defense)</p>
           <ul>
             <li>Build web and mobile applications for eSaniagro, the state animal and plant health platform with 90,000+ users.</li>
-            <li>Shipped two production React Native apps, eVIGI@GRO and Transportador, built offline-first: Realm as the local source of truth, initial data load and sync of pending records when connectivity returns. Improved transport efficiency by up to 20%.</li>
-            <li>Hardened the offline layer: fixed Realm transactions left open, concurrent writes and a startup race condition that caused inconsistent state on launch; moved image uploads to multipart FormData for weak rural connections.</li>
-            <li>Upgraded the public services portal from Angular 15 to Angular 22 incrementally, version by version, keeping the product shipping during the migration.</li>
-            <li>Built an internal monitoring solution with proactive alerting and anomaly detection, including early identification of bot-driven traffic.</li>
-            <li>Work across the stack: built .NET 8 APIs consumed by the apps (JWT, Kafka events, 259 unit tests) and diagnosed production SQL Server deadlocks on payment tables.</li>
+            <li>Shipped eVIGI@GRO and Transportador, two offline-first React Native apps: Realm as the local source of truth, initial data load, and sync of pending records when the signal returns. Transport efficiency up by as much as 20%.</li>
+            <li>Hardened the offline layer: fixed Realm transactions left open, concurrent writes and a startup race condition; moved image uploads to multipart FormData for weak rural connections.</li>
+            <li>Upgraded the public services portal from Angular 15 to 22, version by version, without pausing delivery.</li>
+            <li>Cut load times by up to 40% and built monitoring with proactive alerts that also caught bot-driven traffic early.</li>
+            <li>Work across the stack: .NET 8 APIs behind the apps (JWT, Kafka events, 259 unit tests) and a fix for production SQL Server deadlocks on payment tables.</li>
           </ul>
         </div>
-      </article>
-
-      <article class="job">
-        <p class="when">May 2013 – Mar 2019</p>
+      </li>
+      <li class="row">
+        <span class="when">May 2013 – Mar 2019</span>
         <div>
           <h3>Software Engineer</h3>
-          <p class="org">Mil Tec Tecnologia da Informação · Campo Grande, MS</p>
+          <p class="org">Mil Tec Tecnologia da Informação, Campo Grande</p>
           <ul>
-            <li>Led the visual redesign of eSaniagro, delivering a modern, responsive interface across desktop, tablet and mobile that increased usability and adoption.</li>
-            <li>Built user interfaces with React, Angular and KnockoutJS, integrated REST APIs and implemented state management for critical workflows; helped the team adopt Scrum and continuous delivery.</li>
+            <li>Led the visual redesign of eSaniagro into a responsive interface for desktop, tablet and phone.</li>
+            <li>Built interfaces with React, Angular and KnockoutJS on top of REST APIs; helped the team adopt Scrum and continuous delivery.</li>
           </ul>
         </div>
-      </article>
-
-      <article class="job">
-        <p class="when">Feb 2012 – May 2013</p>
+      </li>
+      <li class="row">
+        <span class="when">Feb 2012 – May 2013</span>
         <div>
           <h3>Software Support Analyst</h3>
-          <p class="org">ITEL Informática · Campo Grande, MS</p>
-          <ul>
-            <li>Developed and maintained web applications with C#, JavaScript and ASP.NET MVC 3.</li>
-          </ul>
+          <p class="org">ITEL Informática, Campo Grande</p>
+          <ul><li>Developed and maintained web applications with C#, JavaScript and ASP.NET MVC 3.</li></ul>
         </div>
-      </article>
+      </li>
+    </ol>
+  </section>
+
+  <section class="block" aria-labelledby="skills">
+    <div class="block-head"><h2 id="skills">Skills</h2></div>
+    <div class="grid2">
+      <div class="field"><span class="lbl">Frontend &amp; mobile</span><p>React, React Native, TypeScript, Next.js, Angular, HTML, CSS, responsive design, accessibility</p></div>
+      <div class="field"><span class="lbl">State &amp; data</span><p>Zustand, use-context-selector, Realm (offline-first), AsyncStorage, sync on reconnect, RxJS, REST, Zod</p></div>
+      <div class="field"><span class="lbl">Quality &amp; delivery</span><p>Jest, Vitest, ESLint, Prettier, code review, GitHub Actions, Azure Pipelines, Docker</p></div>
+      <div class="field"><span class="lbl">Backend</span><p>.NET 8 / C#, ASP.NET Core, SQL Server, PostgreSQL / Supabase, Prisma, JWT, OAuth</p></div>
     </div>
   </section>
 
-  <section aria-labelledby="skills">
-    <div class="wrap">
-      <h2 id="skills">Skills</h2>
-      <dl class="skills">
-        <dt>Frontend &amp; mobile</dt>
-        <dd>React, React Native, TypeScript, Next.js, Angular, HTML, CSS, responsive design, accessibility</dd>
-        <dt>State &amp; data</dt>
-        <dd>Zustand, use-context-selector, Realm (offline-first), AsyncStorage, connectivity-driven sync, RxJS, REST APIs, Zod</dd>
-        <dt>Quality &amp; delivery</dt>
-        <dd>Jest, Vitest, ESLint, Prettier, code review, CI/CD with GitHub Actions and Azure Pipelines, Docker</dd>
-        <dt>Backend</dt>
-        <dd>.NET 8 / C#, ASP.NET Core, SQL Server, PostgreSQL / Supabase, Prisma, JWT and OAuth</dd>
-      </dl>
+  <section class="block" aria-labelledby="clients">
+    <div class="block-head"><h2 id="clients">Independent client work</h2><span class="lbl">Sole developer</span></div>
+    <ul class="rows">
+      <li class="row">
+        <span class="when">Dr. André</span>
+        <div><p>Medical practice site and admin area with Google sign-in and a booking slot engine covered by Vitest tests.</p><p class="stack">Next.js 16 · Prisma · NextAuth · Zod</p></div>
+      </li>
+      <li class="row">
+        <span class="when">ForYouClinic</span>
+        <div><p>Clinic management where double booking is blocked by the database itself, plus a financial module and row-level security.</p><p class="stack">Next.js 16 · Supabase · PostgreSQL</p></div>
+      </li>
+      <li class="row">
+        <span class="when">Novilho Precoce</span>
+        <div><p>Producers' association system: React frontend and its API, with access by profile and status-driven workflows.</p><p class="stack">React · Vite · .NET 8</p></div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="block" aria-labelledby="more">
+    <div class="block-head"><h2 id="more">Education &amp; languages</h2></div>
+    <div class="grid2">
+      <div class="field"><span class="lbl">Education</span><p>B.Sc. in Computer Science, Centro Universitário Anhanguera (UNAES), 2008 – 2011</p></div>
+      <div class="field"><span class="lbl">Languages</span><p>Portuguese, native · English, B2 (CEFR), improving toward professional fluency</p></div>
+      <div class="field"><span class="lbl">Recognition</span><p>Products shortlisted at Brazil's national Public Sector Innovation Contest (ENAP), 2019 and 2020</p></div>
+      <div class="field"><span class="lbl">Contact</span><p><a href="mailto:mvfmoraes@gmail.com">mvfmoraes@gmail.com</a></p></div>
     </div>
   </section>
 
-  <section aria-labelledby="projects">
-    <div class="wrap">
-      <h2 id="projects">Independent client work</h2>
-      <div class="projects">
-        <article class="project">
-          <h3>Dr. André</h3>
-          <p class="stack">Next.js 16 · Prisma · NextAuth · Zod</p>
-          <p>Medical practice site and admin area with Google sign-in and a booking slot engine covered by Vitest tests.</p>
-        </article>
-        <article class="project">
-          <h3>ForYouClinic</h3>
-          <p class="stack">Next.js 16 · Supabase · PostgreSQL</p>
-          <p>Clinic management with double booking prevented at the database level, a financial module and row-level security.</p>
-        </article>
-        <article class="project">
-          <h3>Novilho Precoce</h3>
-          <p class="stack">React · Vite · .NET 8</p>
-          <p>Producers' association system: React frontend and CQRS API with profile-based access and status-driven workflows.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section aria-labelledby="more">
-    <div class="wrap">
-      <h2 id="more">Education &amp; languages</h2>
-      <dl class="facts">
-        <dt>Education</dt>
-        <dd>B.Sc. in Computer Science, Centro Universitário Anhanguera (UNAES), 2008 – 2011</dd>
-        <dt>Languages</dt>
-        <dd>Portuguese, native · English, B2 (CEFR), improving toward professional fluency</dd>
-        <dt>Availability</dt>
-        <dd>Open to remote opportunities</dd>
-      </dl>
-    </div>
-  </section>
+  <footer class="signoff">
+    <div class="line"><span class="lbl">Signed</span><span class="pen">Marcos Moraes</span></div>
+    <span class="lbl">Campo Grande, MS · Brazil</span>
+  </footer>
 </main>
-
-<footer>
-  <div class="wrap">
-    <span>Marcos Vinicius Ferreira Moraes</span>
-    <a href="mailto:mvfmoraes@gmail.com">mvfmoraes@gmail.com</a>
-  </div>
-</footer>
-
 <script>
-(() => {
-  const el = document.getElementById("sync");
-  const text = document.getElementById("sync-text");
-  if (!el || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const steps = [
-    ["queued", "<b>Offline</b> · 3 inspection records queued"],
-    ["queued", "<b>Signal found</b> · sending 1 of 3"],
-    ["queued", "<b>Signal found</b> · sending 3 of 3"],
-    ["synced", "<b>Synced</b> · 3 inspection records sent · 0 conflicts"],
-  ];
-  const delays = [0, 1400, 2100, 2800];
-  el.setAttribute("aria-live", "off");
-  steps.forEach(([state, html], i) => setTimeout(() => {
-    el.dataset.state = state;
-    text.innerHTML = html;
-    if (i === steps.length - 1) el.setAttribute("aria-live", "polite");
-  }, delays[i]));
-})();
+requestAnimationFrame(() => requestAnimationFrame(() => document.documentElement.classList.add("go")));
 </script>
 </body>
 </html>
